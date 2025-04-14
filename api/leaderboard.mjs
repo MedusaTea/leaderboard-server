@@ -6,7 +6,7 @@ import {
   AddToLeaderboard,
 } from '../db/actions/leaderboard.mjs';
 
-app.get('/leaderboard', async (req, res) => {
+app.get('/leaderboard/:leaderboardId', async (req, res) => {
   const { leaderboardId } = req.params
 
   const result = await GetLeaderboard(leaderboardId);
